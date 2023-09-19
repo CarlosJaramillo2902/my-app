@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Productos.css";
 
 function Productos() {
     const [index, setIndex] = useState(9);
@@ -19,23 +20,23 @@ function Productos() {
       <>
         {product ? (
           <>
-          <contendor>
+          <div className="contendor">
             {
                products.slice(0,index).map(mostrarProductos => (
-                <producto>
+                <div className="producto">
                   <h1>
                   {mostrarProductos.title}
                   </h1>
                   <img src={mostrarProductos.image} alt={mostrarProductos.category} />
                   <h2>
-                    {mostrarProductos.price}
+                    ${mostrarProductos.price}
                   </h2>
                   <p>{mostrarProductos.category}</p>
                   <p>{mostrarProductos.description}</p>
-                </producto>
+                </div>
                ))
             }
-          </contendor>
+          </div>
           <button onClick={handleClick}>Ver más</button>
           </>
         ) : (

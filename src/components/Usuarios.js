@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Usuarios.css";
 
 function Usuarios(){
     const [users, setUsers] = useState(null);
@@ -12,12 +13,12 @@ function Usuarios(){
       <>
         {users ? (
           <>
-            <usuario>
-              <div>{users.name.firstname[0]}{users.name.lastname[0]}</div>
-            </usuario>
+            <div className="usuario">
+              <div className="nombre">{users.name.firstname[0]}{users.name.lastname[0]}</div>
+            </div>
           </>
         ) : (
-          <div> loading... </div>
+          <div></div>
         )}
       </>
     );

@@ -1,0 +1,16 @@
+.contenedor{
+    display: flex;
+}
+
+.producto{
+    width: 300px;
+    text-align: center;
+}
+
+h1{
+    font-size: 20px;
+}
+
+img{
+    width: 200px;
+}

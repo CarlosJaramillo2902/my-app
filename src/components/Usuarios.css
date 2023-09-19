@@ -1,0 +1,18 @@
+.usuario{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    text-transform: uppercase;
+    background-color: greenyellow;
+    border-radius: 50%;
+}
