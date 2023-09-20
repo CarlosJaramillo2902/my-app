@@ -6,7 +6,7 @@ function Productos() {
     const [products, setProducts] = useState([]);
   
     function handleClick() {
-      setIndex(index + 3);
+      setIndex(index + 6);
     }
   
     let product = products[index];
@@ -20,7 +20,7 @@ function Productos() {
       <>
         {product ? (
           <>
-          <div className="contendor">
+          <div className="contenedor">
             {
                products.slice(0,index).map(mostrarProductos => (
                 <div className="producto">
@@ -31,13 +31,12 @@ function Productos() {
                   <h2>
                     ${mostrarProductos.price}
                   </h2>
-                  <p>{mostrarProductos.category}</p>
                   <p>{mostrarProductos.description}</p>
                 </div>
                ))
             }
           </div>
-          <button onClick={handleClick}>Ver más</button>
+          <button onClick={handleClick}>VER MÁS</button>
           </>
         ) : (
           <div> loading... </div>
