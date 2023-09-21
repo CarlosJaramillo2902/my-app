@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import "./Productos.css";
 
 function Productos() {
-    const [index, setIndex] = useState(9);
+    const [index, setIndex] = useState(10);
     const [products, setProducts] = useState([]);
+    const [mostrarBoton, setmostrarBoton] = useState([true])
   
     function handleClick() {
-      setIndex(index + 6);
+      setIndex(20);
+      setmostrarBoton(false);
     }
-  
-    let product = products[index];
   
     useEffect(() => {
       fetch("https://fakestoreapi.com/products")
@@ -18,11 +18,11 @@ function Productos() {
     }, []);
     return (
       <>
-        {product ? (
+        {products ? (
           <>
           <div className="contenedor">
             {
-               products.slice(0,index).map(mostrarProductos => (
+               products.slice(0,index).map((mostrarProductos) => (
                 <div className="producto">
                   <h1>
                   {mostrarProductos.title}
@@ -36,7 +36,9 @@ function Productos() {
                ))
             }
           </div>
-          <button onClick={handleClick}>VER MÁS</button>
+          {mostrarBoton &&(
+            <button onClick={handleClick}>VER MÁS</button>
+          )}          
           </>
         ) : (
           <div> loading... </div>
