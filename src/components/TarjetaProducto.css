@@ -1,27 +1,8 @@
-.contenedor{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.contenedorT{
+    height: 550px;
 }
 
-.producto{
-    display: flex;
-    flex-direction: column;
-    max-height: 300px;
-    max-width: 300px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 5px;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-}
-
-h1{
-    font-size: 20px;
-}
-
-img{
+img {
     width: auto;
     margin: 10px;
     mix-blend-mode: darken;

@@ -15,6 +15,7 @@ function Usuarios(){
           <>
             <div className="usuario">
               <div className="nombre">{users.name.firstname[0]}{users.name.lastname[0]}</div>
+              <div className="carrito"><img src="../imagenes/Carrito.png" alt="Carrito de Compras"/></div>
             </div>
           </>
         ) : (

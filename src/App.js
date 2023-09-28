@@ -1,14 +1,17 @@
-import Usuarios from "./components/Usuarios";
 import Productos from "./components/Productos";
+import TarjetaProducto from "./components/TarjetaProducto";
+import Usuarios from "./components/Usuarios";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Usuarios />
-      <Productos />
+      <Routes>
+        <Route path="/" element={<Productos />} />
+        <Route exact path="/products/:id" element={<TarjetaProducto />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
