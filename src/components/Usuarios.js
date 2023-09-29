@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Usuarios.css";
 
 function Usuarios(){
@@ -15,7 +16,9 @@ function Usuarios(){
           <>
             <div className="usuario">
               <div className="nombre">{users.name.firstname[0]}{users.name.lastname[0]}</div>
-              <div className="carrito"><img src="../imagenes/Carrito.png" alt="Carrito de Compras"/></div>
+              <Link to={"/carrito"}>
+                <button className="carrito" alt="Carrito de Compras"></button>
+              </Link>
             </div>
           </>
         ) : (

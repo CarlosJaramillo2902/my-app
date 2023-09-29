@@ -22,3 +22,11 @@
     display: flex;
     justify-content: end;
 }
+
+button{
+    width: 60px;
+    height: 60px;
+    background-image: url('../imagenes/Carrito.svg');
+    background-size: 60px 60px;
+    border-radius: 50%;
+}

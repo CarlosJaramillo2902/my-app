@@ -12,6 +12,13 @@ function TarjetaProducto() {
       .then((response) => response.json())
       .then((data) => setProduct(data));
   }, [id]);
+
+  const añadirCarrito = () => {
+    const carritoActual = JSON.parse(localStorage.getItem("carrito")) || [];
+    carritoActual.push(product);
+    localStorage.setItem("carrito", JSON.stringify(carritoActual));
+  }
+
   return (
     <>
       {product ? (
@@ -24,6 +31,7 @@ function TarjetaProducto() {
           <img width="150" height="350" he src={product.image} alt={product.category} />
           <p>{product.description}</p>
           <Link to={"/"} className="boton">Volver</Link>
+          <Link to={"/"} onClick={añadirCarrito} className="botonCarrito">Añadir al Carrito</Link>
         </div>
         </>
       ) : (

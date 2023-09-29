@@ -24,7 +24,7 @@ function Productos() {
             src={product.image}
             alt={product.category}
           />
-          <Link to={`products/${product.id}`} className="boton">Ver mas...</Link>
+          <Link to={`productos/${product.id}`} className="boton">Ver mas...</Link>
         </div>
       ))}
     </div>

@@ -1,3 +1,40 @@
 .contendor{
-    
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    justify-content: center;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1920px;
+    justify-content: center;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+h1{
+    width: 1920px;
+}
+
+img{
+    width: auto;
+    margin: 10px;
+    mix-blend-mode: darken;
+}
+
+.boton{
+    height: 20px;
 }
